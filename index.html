@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrogen Songs</title>
+
+    <style>
+        div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        audio {
+            width: 50%;
+        }
+
+        button {
+            padding: 1rem;
+            border-radius: 10ch;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>    
+        <audio controls src="songs/NTI Awards Daniil Solo.mp3"></audio>
+        <button onclick="copy(this)">Copy Link</button>
+    </div>
+
+    <script>
+        function copy(src) {
+            navigator.clipboard.writeText(src.parentElement.querySelector('audio').src);
+        }
+    </script>
+</body>
+
+</html>
